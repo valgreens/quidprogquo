@@ -1,0 +1,273 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title></title>
+	<meta name="description" content="">
+	<meta name="author" content="valgreens">
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="container">
+
+		<h1><a href="#home">Quid Prog Quo</a></h1>
+		<h2 class="pull-right">#weareatwar</h2>
+</header>
+
+<div role="main" class="container">
+
+	<div class="row">
+		<div class="span10">
+			<article class="box info">
+				<a href="http://twitter.com/edans">Enrique Dans</a> wrote an <a href="http://www.enriquedans.com/2012/06/el-programador-perdido-en-mi-columna-de-expansion.html">article</a>, <a href="https://twitter.com/david_bonilla">David Bonilla</a> answered <a href="http://www.bonillaware.com/la-falacia-del-programador-perdido">back</a>. This is <a href="#team">our</a> contribution, because <a href="https://twitter.com/#!/search/%23weareatwar">#weareatwar</a>, and this is our voice: <a href="#about">Quid Prog Quo</a>!
+			</article>
+			
+		</div>
+		
+	</div>
+
+	<div class="row">
+		<div class="span10">
+			
+			
+			<div class="span10 app" id="main">
+				
+			</div>
+
+			
+
+		</div>
+		<div class="span2">
+			<img src="img/weaareatwar.002.png" alt="" class="img-war">
+			<ul class="nav nav-list">
+  				
+  				
+			</ul>
+		</div>
+
+	</div>
+	
+
+	
+	
+
+</div>
+<footer class="container">
+	<p>2012 :blibb team - built with love &amp; beer using :blibb</p>
+	<p><img src="img/humanstxt.gif" alt=""></p>
+</footer>
+
+<script src="js/libs/jquery-1.7.2.min.js"></script>
+<script src="js/libs/underscore.js"></script>
+<script src="js/libs/backbone.js"></script>
+
+<script type="text/template" id="mainContainer">
+	<div class="span10 no-scroll" id="main">
+				
+	</div>
+</script>
+
+<script type="text/template" id="infoboxWrapper">
+	<article class="box info-box">
+				
+				
+	</article>
+</script>
+
+<script type="text/template" id="numberProgs">
+	<h1 class="number"><%= number %></h1>
+	<h2 class="text">Programmers think that <a href="http://twitter.com/edans">@edans</a> is <a href="http://www.enriquedans.com/2012/06/el-programador-perdido-en-mi-columna-de-expansion.html">mistaken</a></h2>
+</script>
+
+<script type="text/template" id="progAlert">
+	<div class="alert alert-info span9">
+  		<button class="close" data-dismiss="alert">×</button>
+  		Our services take about 30 seconds to fetch your twitter info, please reload the page in a few seconds.
+	</div>
+</script>
+
+<script type="text/template" id="saveForm">
+	<a class="btn btn-info join" data-toggle="modal" href="#myModal" id="joinButton">Join the fight</a>
+	<div class="modal hide" id="myModal">
+		<div class="modal-header">
+			<a href="#" type="button" class="close" data-dismiss="modal">×</a>
+	    	<h3>Join the fight!</h3>
+	  	</div>
+	  	<div class="modal-body">
+	    	<form class="form-horizontal">
+  				<fieldset>
+    				<div class="control-group">
+      					<label class="control-label" for="twitterIN">Twitter User Name:</label>
+      					<div class="controls">
+        					<input type="text" class="input-xlarge" id="twitterIN">
+        					<p class="help-block">We will use your profile to get your name, description, location and photo</p>
+      					</div>
+    				</div>
+    				<div class="control-group">
+      					<label class="control-label" for="tagsIN">Skills:</label>
+      					<div class="controls">
+        					<input type="text" class="input-xlarge" id="tagsIN">
+        					<p class="help-block">Write your skills or programming languages with  whitespace between them</p>
+      					</div>
+    				</div>
+    				<div class="control-group">
+      					<label class="control-label" for="rateIN">Daily Rate:</label>
+      					<div class="controls">
+        					<input type="text" class="input-xlarge" id="rateIN" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+      					</div>
+    				</div>
+    				<div class="control-group">
+      					<label class="control-label" for="githubIN">Github User:</label>
+      					<div class="controls">
+        					<input type="text" class="input-xlarge" id="githubIN">
+      					</div>
+    				</div>
+  				</fieldset>
+			</form>
+	  	</div>
+	  	<div class="modal-footer">
+	    	<a href="#home" class="btn" data-dismiss="modal">Close</a>
+	    	<a href="#home" class="btn btn-info" id="saveProg">Save changes</a>
+	  	</div>
+	</div>
+</script>
+
+<script type="text/template" id="listItem">
+	<div class="row">
+	<div class="span4 box">
+		<article>
+			<img src="<%= itemA.get('twitter').profile_image_url %>" alt="twitter photo">
+			<header><a href="http://twitter.com/<%= itemA.get('twitter').screen_name %>">@<%= itemA.get('twitter').screen_name %></a></header>
+			<p><%= itemA.get('twitter').location %></p>
+			<ul>
+				<li><%= itemA.get('twitter').name %></li>
+				<li><%= itemA.get('twitter').description %></li>
+				
+				<li class="rate"><%= itemA.get('rate') %> &#8364;/day</li>
+				<li>
+					<% _.each(itemA.get('tags'), function (tag) { %>
+  						<a class="label label-info" href="#tag/<%= tag %>"><%= tag %></a> 
+					<% }); %>
+				</li>
+				<li><a href="http://github.com/<%= itemA.get('github') %>">Github account</a></li>
+			</ul>
+		</article>
+	</div>
+	<% if (itemB !== undefined) { %>
+	<div class="span4 offset1 box">
+		<article>
+			<img src="<%= itemB.get('twitter').profile_image_url %>" alt="twitter photo">
+			<header><a href="http://twitter.com/<%= itemB.get('twitter').screen_name %>">@<%= itemB.get('twitter').screen_name %></a></header>
+			<p><%= itemB.get('twitter').location %></p>
+			<ul>
+				<li><%= itemB.get('twitter').name %></li>
+				<li><%= itemB.get('twitter').description %></li>
+				
+				<li class="rate"><%= itemB.get('rate') %> &#8364;/day</li>
+				<li>
+					<% _.each(itemB.get('tags'), function (tag) { %>
+  						<a class="label label-info" href="#tag/<%= tag %>"><%= tag %></a> 
+					<% }); %>
+				</li>
+				<li><a href="http://github.com/<%= itemB.get('github') %>">Github account</a></li>
+			</ul>
+		</article>
+	</div>
+	<% }; %>
+
+	</div>
+	
+</script>
+
+<script type="text/template" id="taglist">
+	
+	<% _.each(tags, function (tag) { %>
+
+  		<li><a href="#tag/<%= tag %>"><%= tag %></a></li>
+
+	<% }); %>
+</ul>
+</script>
+
+
+<script type="text/template" id="aboutTemplate">
+	<div class="about-text">
+		<p><strong>From <a hre="http://en.wikipedia.org/wiki/Quid_pro_quo">Wikipedia:</a></strong> <strong>Quid pro quo</strong> ("this for that" in Latin) most often means a more-or-less <strong>equal exchange</strong> or substitution of goods or services. English speakers often use the term to mean "a favor for a favor" and the phrases with almost identical meaning include: "give and take", "tit for tat", "this for that", and "you scratch my back, and I'll scratch yours".</p>
+
+		<p>And later on we can read that</p>
+
+		<p>Quid pro quo may sometimes be used to define a misunderstanding or blunder made by the substituting of one thing for another, particularly in the context of the transcribing of a text. In this alternate context, the phrase qui pro quo is more correct.</p>
+
+		<p>Both meanings coming very handy for this little experiment called "Quid Prog Quo" ("this programmer that") where we try to prove our point:</p>
+
+		<p>Showing in a practical way that <a href="http://twitter.com/edans">Mr. Enrique Dans</a> is mistaken when he asserts that it's very difficult to find good programmers in Spain. We are many and it is true: we don't come cheap!</p>
+
+		<p>The second point comes hand in hand with the first wikipedia definition, the one about the equal exchange. This is why we have added a field where developers can put their daily rate, because where there are two parties confronted upon an issue, it&#39;s always good to listen to both sides. We know how much money developers are paid (which is different from what they cost), but how much money would they think it&#39;s a reasonable amount for their daily wage? Let&#39;s find out!</p>
+
+		<p>We have designed Quid Prog Quo to satisfy both worlds. If you&#39;re looking for good developers you can just browse the different categories, you have their twitter details and their github repos in case you fancy getting in contact with them.</p>
+
+		<p>We want to send our warmest thank you to <a href="https://twitter.com/david_bonilla">Mr David Bonilla</a> for kicking off the <a href="https://twitter.com/#!/search/%23weareatwar">#weareatwar</a> campaign which has give us the perfect scenario to tell the world how awesome developers we are, that we are plenty, and that you can jump in into the ground and enrol into the geek resistance that will aim to change a bit (or 8) this world.</p>
+
+		<p>Let&#39;s start a conversation!</p>
+
+		<p><a href="#home">Quid Prog. Quo.</a></p>
+		<div class="pull-right formButton"></div>
+		<a href="#home" class="pull-right back"> Go Back</a>
+	</div>
+</script>
+
+<script type="text/template" id="teamTemplate">
+	<h2>Our Team</h2>
+	<div class="row">
+	<div class="span4 box team">
+		<article>
+			<img src="img/ipedrazas.jpg" alt="twitter photo">
+			<header><a href="http://twitter.com/ipedrazas">@ipedrazas</a></header>
+			<ul>
+				<li class="quote">"Java, python, php... the language is not that important on a project. What it makes a big difference is the people who form your team"</li>
+				<li>Developer, 38 years, born in Barcelona and currently living in London with his wife and children. He likes programming, ultra-running and complaining about the awful English weather. </li>
+				<li>He is the proud founder of <a href="http://blibb.net">:blibb</a>, a content platform.</li>
+				
+			</ul>
+		</article>
+	</div>
+
+	<div class="span4 offset1 box team">
+		<article>
+			<img src="img/valgreens.png" alt="twitter photo">
+			<header><a href="http://twitter.com/valgreens">@valgreens</a></header>
+			<ul>
+				<li class="quote">"Whatever you do, Do it!"</li>
+				<li>22 years old front-end guy. Curious mind who writes code from the sunny Almería in Spain. Runner-wanna-be.</li>
+				<li>Proud and happy developer at <a href="http://blibb.net">:blibb</a>.</li>
+				
+			</ul>
+		</article>
+	</div>
+	</div>
+</script>
+
+
+<script src="js/libs/bootstrap-modal.js">
+	$('#myModal').modal({show: false});
+</script>
+<script src="js/libs/bootstrap-alert.js">
+	$(".alert").alert();
+</script>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>

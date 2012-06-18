@@ -1,0 +1,18 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+/* TEAM */
+  Blibb-backend boss: Ivan Pedrazas
+  Site: blibb.net
+  Twitter: @ipedrazas
+  Location: London, UK
+
+  Front-End Guy: Antonio Valverde
+  Site: valgreens.es
+  Twitter: @valgreens
+  Location: Almería, Spain
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: Modernizr, jQuery, Backbone, Underscore, :blibb
+  Software: Sublime Text 2

@@ -1,0 +1,185 @@
+/**
+ *
+ * @version    0.1
+ * @link       http://quidprogquo.com
+ *
+ * @author     Antonio Valverde @valgreens - antonio@valgreens.es
+ */
+
+body {
+  font-family: 'Open Sans', Verdana, Helvetica, sans-serif;
+}
+
+header {
+  margin-top: 15px;
+  border-bottom: 1px solid #DDD;
+}
+
+h1, h3 {
+  font-family: 'Bree Serif', Georgia, serif;
+  color: #58A0AE;
+}
+
+h2 {
+  font-family: 'Open Sans', Verdana, Helvetica, sans-serif;
+}
+
+a { 
+  color: #58A0AE;
+}
+
+a:hover {
+  color: #58A0AE;
+  text-decoration: underline;
+}
+
+.app {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 850px;
+}
+
+.no-scroll {
+  overflow-y: none;
+  overflow-x: none;
+}
+
+.about-text {
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+.about-text p {
+  margin-right: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.formButton {
+  margin-right: 30px;
+}
+
+.back {
+  margin-right: 30px;
+}
+
+.info {
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.info-box {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.info-box .number {
+  float: left;
+  margin: 25px 25px 10px 25px;
+  font-size: 3em;
+}
+
+.info-box .text {
+  margin: 25px 25px 5px 25px;
+}
+
+.info-box .join {
+  margin: 5px 15px 15px 15px;
+  float: right;
+}
+
+.img-war {
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+.box {
+  background: #F7F7F7 url("//s3.amazonaws.com/wrapbootstrap/live/imgs/darkgrain.png");
+  color: #333;
+  border: 1px solid #DDD;
+  border-radius: 5px;
+  margin-top: 15px;
+  float: left;
+}
+
+.box article header {
+  font-size: 1.5em;
+  margin-top: 10px;
+  margin-left: 1em;
+  font-weight: bold;
+  width: 60%;
+  border: 0;
+  float: left;
+}
+
+.box article p {
+  float: left;
+  font-size: 1.1em;
+  margin-top: 0.8em;
+  margin-left: 1em;
+  width: 60%;
+}
+
+.box article img {
+  margin-left: 0;
+  width: 73px;
+  height: 73px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  float: left;
+}
+
+.box article ul {
+  margin-top: 10px;
+  margin-left: 10px;
+  list-style: none;
+  float: left;
+  clear: both;
+}
+
+.box article ul li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  line-height: 1.5em;
+}
+
+.box article ul li .rate {
+  font-size: 1.4em;
+}
+
+.box article ul li span {
+  margin-right: 5px;
+}
+
+.nav-list .nav-header {
+  color: #333;
+}
+
+.quote {
+  font-style: italic;
+}
+
+.team article ul li {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.tag a:link{
+  color: white;
+}
+.tag a:visited{
+  color: white;
+}
+
+
+
+
+
+footer {
+  margin-top: 10px;
+}
