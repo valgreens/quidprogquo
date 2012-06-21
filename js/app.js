@@ -1,6 +1,5 @@
 /**
- *
- * @version    0.1
+ * @version    0.2
  * @link       http://quidprogquo.com
  *
  * @author     Antonio Valverde @valgreens - antonio@valgreens.es
@@ -9,9 +8,7 @@
 (function ($, _) {
 	
 	/**
-	*
 	* Collections
-	*
 	*/
 
 	var ItemsCollection = Backbone.Collection.extend({
@@ -39,9 +36,7 @@
 	});
 
 	/**
-	*
 	* Views
-	*
 	*/
 
 	var AppView = Backbone.View.extend({
@@ -111,7 +106,8 @@
 			$(this.el).append(_.template($('#saveForm').html()));
 		},
 		events: {
-			'click #saveProg': 'addProg'
+			'click #saveProg': 'addProg',
+			'click #twitterButton': 'auth'
 		},
 		addProg: function() {
 			var twitter, skills, rate, github;
@@ -136,7 +132,30 @@
 				$('#main').before(_.template($('#progAlert').html()));
 
 			});
+		},
+		auth: function() {
+			console.log('clicked!');
+			var op = {
+				consumerKey : 'eBvxNauIvAeOUDYT45bsIg',
+				consumerSecret : 'J3sv1knk2qckf1ELHMJX7GakGUjwX8zQcsCI6wNPeg'
+			};
+			var requestParams;
+			var accessParams;
 
+			var oauth = OAuth(op);
+
+			oauth.get('https://api.twitter.com/oauth/request_token',
+				// success
+				function(data) {
+					console.log(data);
+					//window.open('https://twitter.com/oauth/authorize?'+data.text);
+					requestParams = data.text;
+				},
+				// fail!
+				function(data) {
+					console.error(data);
+				}
+			);
 		}
 	});
 
@@ -194,9 +213,7 @@
 	});
 
 	/**
-	*
 	* Routes
-	*
 	*/
 
 	var AppRouter = Backbone.Router.extend({
@@ -221,9 +238,7 @@
 	});
 
 	/**
-	*
 	* Initialize app
-	*
 	*/
 
 	var app_route = new AppRouter();

@@ -72,6 +72,7 @@
 <script src="js/libs/jquery-1.7.2.min.js"></script>
 <script src="js/libs/underscore.js"></script>
 <script src="js/libs/backbone.js"></script>
+<script src="js/libs/jsOAuth-1.3.4.js"></script>
 
 <script type="text/template" id="mainContainer">
 	<div class="span10 no-scroll" id="main">
@@ -109,9 +110,9 @@
 	    	<form class="form-horizontal">
   				<fieldset>
     				<div class="control-group">
-      					<label class="control-label" for="twitterIN">Twitter User Name:</label>
+      					<label class="control-label" for="twitterIN">Twitter data:</label>
       					<div class="controls">
-        					<input type="text" class="input-xlarge" id="twitterIN">
+        					<a class="btn btn-info" href="#" id="twitterButton">Connect with Twitter</a>
         					<p class="help-block">We will use your profile to get your name, description, location and photo</p>
       					</div>
     				</div>
